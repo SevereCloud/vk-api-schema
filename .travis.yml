@@ -1,0 +1,16 @@
+language: node_js
+
+cache: npm
+
+install:
+  - curl http://json-schema.org/draft-07/schema -o draft-07.json
+  - npm install -g ajv-cli
+
+script:
+  - ajv -s draft-07.json -d schema.json --all-errors --verbose
+  - ajv -s draft-07.json -d methods.json --all-errors --verbose
+  - ajv -s draft-07.json -d objects.json --all-errors --verbose
+  - ajv -s draft-07.json -d responses.json --all-errors --verbose
+  - ajv -s schema.json -d methods.json --all-errors --verbose
+  - ajv -s schema.json -d objects.json --all-errors --verbose
+  - ajv -s schema.json -d responses.json --all-errors --verbose
