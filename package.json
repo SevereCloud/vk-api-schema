@@ -1,6 +1,6 @@
 {
   "name": "@vkontakte/api-schema",
-  "version": "5.80.1",
+  "version": "5.116.2",
   "description": "VK API JSON Schema",
   "repository": {
     "type": "git",
@@ -19,5 +19,8 @@
   "bugs": {
     "url": "https://github.com/VKCOM/vk-api-schema/issues"
   },
-  "homepage": "https://github.com/VKCOM/vk-api-schema#readme"
+  "homepage": "https://github.com/VKCOM/vk-api-schema#readme",
+  "scripts": {
+    "release": "./tasks/release.sh"
+  }
 }
